@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>redis GUI</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"></meta>
+		<link 	type="image/x-icon"		href="http://127.0.0.1:8125/served/images/ico.ico" 	rel="icon"  />
+		<link 	type="text/css" 		href="http://127.0.0.1:8125/served/css/redisGui.css" 	rel="stylesheet" />
+		
+		<script type="text/javascript" 	src="http://127.0.0.1:8081/socket.io/socket.io.js">				</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/socket/socket.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/socket/handleWhat.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/socket/emits.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/armour/armour.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/armour/makeNewArmour.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/achiefment/achiefment.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/achiefment/makeNewAchiefment.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/audioVideo/audioVideo.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/container/container.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/container/makeNewContainer.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/consumables/consumables.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/consumables/makeNewConsumable.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/faction/faction.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/land/makeLand.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/land/land.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/material/material.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/material/makeNewMaterial.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/misc/misc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/misc/makeNewMisc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/mob/mob.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/mob/makeNewMob.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/model/model.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/npc/npc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/npc/newNpc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/npc/makeNewNpc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/weapons/weapons.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/weapons/makeNewWeapon.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/salvage/salvage.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/salvage/makeNewSalvageItem.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/quest/makeNewQuest.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/quest/quest.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/questItems/questItem.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/questItems/makeNewQuestItem.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/users/showUsers.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/users/showChars.js">	</script>
+		<!--script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/makeNew.js">	</script-->
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/createWeapon.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/itemData.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/data.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/showWhat.js">	</script>
+		
+	</head>
+	<body>
+		<div id="selector">
+			<input type="button" value="weapons" 		id="weapons"		onclick="showWhat('weapons')"></input>
+			<input type="button" value="npcs" 			id="npcs"			onclick="showWhat('npcs')"></input>
+			<input type="button" value="mobs" 			id="mobs"			onclick="showWhat('mobs')"></input>
+			<input type="button" value="quests" 		id="quests"			onclick="showWhat('quests')"></input>
+			<input type="button" value="consum"		 	id="consumables"	onclick="showWhat('consumables')"></input>
+			<input type="button" value="qItems" 		id="questitems"		onclick="showWhat('questitems')"></input>
+			<input type="button" value="misc" 			id="misc"			onclick="showWhat('misc')"></input>
+			<input type="button" value="armour" 		id="armour"			onclick="showWhat('armour')"></input>
+			<input type="button" value="materials" 		id="materials"		onclick="showWhat('materials')"></input>
+			<input type="button" value="containers" 	id="containers"		onclick="showWhat('containers')"></input>
+			<input type="button" value="salvItems" 		id="salvageItems"	onclick="showWhat('salvageItems')"></input>
+			<input type="button" value="achief" 		id="achiefment"		onclick="showWhat('achiefment')"></input>
+			<input type="button" value="land" 			id="land"			onclick="showWhat('land')"></input>
+			<input type="button" value="data" 			id="dataOnServer"	onclick="showWhat('data')"></input>
+			<input type="button" value="model" 			id="model"			onclick="showWhat('model')"></input>
+			<input type="button" value="users" 			id="users"			onclick="showWhat('users')"></input>
+			<input type="button" value="skilz" 			id="skilz"			onclick="showWhat('skilz')"></input>
+			<input type="button" value="factions" 		id="factions"		onclick="showWhat('factions')"></input>
+		</div>
+		<div id="dataView">
+			select one of the above things to edit / show
+		</div>		
+		<div id="dataGrid">
+			<div id="dataGridTops">
+			</div>
+			<div id="dataGridL">
+				Search Results will be displayed in here
+			</div>	
+			<div id="dataGridR">
+			</div>	
+		</div>
+	</body>
+</html>
