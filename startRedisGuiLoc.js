@@ -10,7 +10,9 @@ var served				=	require("redisGui/redisGui/served");
 function startRedisGuiLoc()
 	{
 		startRedisWebGui.startRedisWebGui();
-		served.serveStatics();
+		served.serve();
 	}
+	
+startRedisGuiLoc();
 
 exports.startRedisGuiLoc	= startRedisGuiLoc;

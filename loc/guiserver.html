@@ -2,50 +2,50 @@
 	<head>
 		<title>redis GUI</title>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"></meta>
-		<link 	type="image/x-icon"		href="http://127.0.0.1:8125/served/images/ico.ico" 	rel="icon"  />
-		<link 	type="text/css" 		href="http://127.0.0.1:8125/served/css/redisGui.css" 	rel="stylesheet" />
+		<link 	type="image/x-icon"		href="http://127.0.0.1:8126/redisgui-served/images/ico.ico" 	rel="icon"  />
+		<link 	type="text/css" 		href="http://127.0.0.1:8126/redisgui-served/css/redisGui.css" 	rel="stylesheet" />
 		
 		<script type="text/javascript" 	src="http://127.0.0.1:8081/socket.io/socket.io.js">				</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/socket/socket.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/socket/handleWhat.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/socket/emits.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/armour/armour.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/armour/makeNewArmour.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/achiefment/achiefment.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/achiefment/makeNewAchiefment.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/audioVideo/audioVideo.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/container/container.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/container/makeNewContainer.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/consumables/consumables.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/consumables/makeNewConsumable.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/faction/faction.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/land/makeLand.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/land/land.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/material/material.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/material/makeNewMaterial.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/misc/misc.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/misc/makeNewMisc.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/mob/mob.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/mob/makeNewMob.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/model/model.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/npc/npc.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/npc/newNpc.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/npc/makeNewNpc.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/weapons/weapons.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/weapons/makeNewWeapon.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/salvage/salvage.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/salvage/makeNewSalvageItem.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/quest/makeNewQuest.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/quest/quest.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/questItems/questItem.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/questItems/makeNewQuestItem.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/users/showUsers.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/f/users/showChars.js">	</script>
-		<!--script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/makeNew.js">	</script-->
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/createWeapon.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/itemData.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/data.js">	</script>
-		<script type="text/javascript" 	src="http://127.0.0.1:8125/served/js/redisGui/showWhat.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/socket/socket.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/socket/handleWhat.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/socket/emits.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/armour/armour.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/armour/makeNewArmour.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/achiefment/achiefment.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/achiefment/makeNewAchiefment.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/audioVideo/audioVideo.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/container/container.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/container/makeNewContainer.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/consumables/consumables.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/consumables/makeNewConsumable.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/faction/faction.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/land/makeLand.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/land/land.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/material/material.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/material/makeNewMaterial.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/misc/misc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/misc/makeNewMisc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/mob/mob.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/mob/makeNewMob.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/model/model.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/npc/npc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/npc/newNpc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/npc/makeNewNpc.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/weapons/weapons.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/weapons/makeNewWeapon.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/salvage/salvage.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/salvage/makeNewSalvageItem.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/quest/makeNewQuest.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/quest/quest.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/questItems/questItem.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/questItems/makeNewQuestItem.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/users/showUsers.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/f/users/showChars.js">	</script>
+		<!--script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/makeNew.js">	</script-->
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/createWeapon.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/itemData.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/data.js">	</script>
+		<script type="text/javascript" 	src="http://127.0.0.1:8126/redisgui-served/showWhat.js">	</script>
 		
 	</head>
 	<body>

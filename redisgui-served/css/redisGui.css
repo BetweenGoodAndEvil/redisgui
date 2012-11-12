@@ -1,0 +1,256 @@
+#dataView
+	{
+		position:absolute;
+		top:7%;
+		left:0px;
+		width:100%;
+		height:5%;
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+		-webkit-box-shadow: 0 -20px 0 rgba(40, 40, 40, 0.4), 0 8px 1px rgba(0, 0, 0, 0.8);
+		-moz-box-shadow: 0 -12px 0 rgba(40, 40, 40, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+		border-bottom-color: black;
+		background-color: #141414;
+}
+
+#dataGrid
+	{
+		border-top-width:1px;
+		border-top-color:red;
+		position:absolute;
+		left:0px;
+		width:100%;
+		height:85%;
+		border-top-style:groove;
+		top: 15%;
+	}
+	
+#selector
+	{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 7%;
+		width: 100%;
+		background-color: #141414;
+	}
+	
+#nameDiv,#valueDiv,#optionsDiv,#sizeDiv,#statsDiv,#enchantmentsDiv,#baseSwingDiv,#soundDiv,#questDiv,#imageDiv,#modelDiv,#animations,#baseDmg,#baseDef,#playersOnline,#owners,#neighbourTz,#neighbourBz,#neighbourLz,#neighbourRz,#levelz,#sel
+	{
+		width:5.5%;
+		float:left;
+		border-color:grey;
+		border-style:solid;
+		border-width:1px;
+		height: 5%;
+	}
+	
+#nameDiv1,#valueDiv1,#optionsDiv1,#sizeDiv1,#statsDiv1,#enchantmentsDiv1,#baseSwingDiv1,#soundDiv1,#questDiv1,#imageDiv1,#modelDiv1,#animations1,#baseDmg1,#baseDef1,#owners1,#playersOnline1,#level,#neighbourT,#neighbourB,#neighbourL,#neighbourR,#sel1
+	{
+		width:5.5%;
+		float:left;
+		border-color:grey;
+		border-style:solid;
+		border-width:1px;
+		
+	}
+
+#descriptionDiv,#descriptionDiv1
+	{
+		width:8%;
+		float:left;
+		border-color:grey;
+		border-style:solid;
+		border-width:1px;
+		height: 5%;
+	}
+	
+#selected,#selected1
+	{
+		width:20px;
+		float:left;
+	}
+	
+input[type='range'] {
+-webkit-appearance: none;
+padding-left:2px; padding-right:2px;
+-webkit-border-radius: 5px;
+background-image: -webkit-linear-gradient(top, #000000, #333333, #000000);
+}
+
+#pictures
+	{
+		width:100%;
+		height:100%;
+	}
+
+#landPropNames
+	{
+		width: 100%;
+		position: absolute;
+	}
+	
+#selectedModel,#render,#modelName
+	{
+		width:32.3%;
+		height:5%;
+		border-width:1px;
+		border-style:solid;
+		border-color:black;
+		float:left;
+	}
+	
+#selectedModel1,#modelName1,#render1
+	{
+		width:33%;
+		float:left;
+	}
+#selectionDiv,#theModelName,#renderItPlz
+	{
+		border-color:black;
+		border-width:1px;
+		border-style:solid;
+		width:100%;
+		height:5%;
+		float:left;
+	}
+	
+#npcPropertiesDiv
+	{
+		position: absolute;
+		width: 100%;
+		float: left;
+	}
+#npcPropertiesDivz
+	{	
+		position: absolute;
+		width: 100%;
+		float: left;
+		top: 10%;
+	}
+	
+#getModels
+	{
+		float:left;
+	}
+	
+#npcNameProp,#npcRaceProp,#npcClassProp,#npcAttackableProp,#npcLocationProp,#npcLvlProp,#npcAiLvlProp,#npcStoryDefaultProp,#npcModelProp,#npcFactionProp,#npcTypeProp
+	{
+		border-color:black;
+		border-width:1px;
+		border-style:solid;
+		width: 8%;
+		float:left;
+	}
+
+#npcNamePropz,#npcRacePropz,#npcClassPropz,#npcAttackablePropz,#npcLocationPropz,#npcLvlPropz,#npcAiLvlPropz,#npcStoryDefaultPropz,#npcModelPropz,#npcFactionPropz,#npcTypePropz
+	{
+		border-color:black;
+		border-width:1px;
+		border-style:solid;
+		width: 8%;
+		float:left;
+	}
+	
+#dataGridR
+	{
+		float: left;
+		width: 59%;
+		position: absolute;
+		left: 40%;
+		top: 0%;
+		height:100%;
+		border-left-color: black;
+		border-left-style: solid;
+		border-left-width: 1px;
+	}
+#datGridTop
+	{
+		top: 15%;
+		position: absolute;
+		width: 100%;
+	}
+	
+#dataGridL
+	{
+		width: 40%;
+		height: 100%;
+		float: left;
+		left: 0px;
+		top: 14%;
+	}
+	
+#landPropNames
+	{
+		width: 100%;
+		height: 100%;
+		float: left;
+		top: 0%;
+		position: absolute;
+	}
+
+.row
+	{
+		height:20px;
+		border-top-color:grey;
+		border-top-width:1px;
+		border-top-style:solid;
+	}
+	
+#landProperties
+	{
+		width: 100%;
+		height: 100%;
+		float: left;
+		top: 5%;
+		position: absolute;
+	}
+	
+#selected
+	{
+	
+	}
+	
+#weapons,#npcs,#mobs,#quests,#consumables,#questitems,#misc,#armour,#materials,#containers,#salvageItems,#land,#achiefment,#model,#users,#skilz,#factions,#dataOnServer
+	{
+		padding: 4px 4px;
+		background: #4479BA;
+		color: #FFF;
+		width:5.1%;
+		 -webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		border: solid 1px #20538D;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+
+#makeNew,#select,#edit,#delete
+	{
+		background: rgb(150,150,150);
+		color: #FFF;
+		width:6%;
+		 -webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		border: solid 1px #20538D;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	}	
+	
+#selectWeapon,#selectLand,#selectNpc,#selectConsumable,#selectArmour,#selectMaterial,#selectSalvageable,#selectAchiefment,#selectFaction,#selectMob,#selectQuest
+	{
+		background-color: #F0F0F0;
+		font: 14px "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+		color: #5A5A5A;
+		padding: 0 7px;
+		height: 32px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: silver;
+		width:20%;
+	}

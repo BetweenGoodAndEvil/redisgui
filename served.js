@@ -4,13 +4,14 @@ var fs = require('fs');
  
 function serveStatics()
 	{
+		console.log('started serving statics');
 		http.createServer(function (request, response) {
 		 
 			console.log('request starting...');
 			 
 			var filePath = '.' + request.url;
 			if (filePath == './')
-				filePath = './redisgui-served/';
+				filePath = './redisgui/redisgui/redisgui-served/';
 			 
 			path.exists(filePath, function(exists) {
 			 
@@ -33,9 +34,9 @@ function serveStatics()
 				}
 			});
 			 
-		}).listen(8125);
+		}).listen(8126);
 		 
-		console.log('File Server running at http://127.0.0.1:8125/');
+		console.log('File Server running at http://127.0.0.1:8126/');
 	}
 
 exports.serve				=		serveStatics;
