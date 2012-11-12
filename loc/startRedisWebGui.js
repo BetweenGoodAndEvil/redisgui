@@ -1,17 +1,17 @@
-var handlerz		=	require("gloomfall/redisGui/general/handler");
-var createItem		=	require("gloomfall/redisGui/general/createItem");
-var handleUsers		=	require("gloomfall/redisGui/general/handleUsers");
-var handleChars		=	require("gloomfall/redisGui/general/handleChars");
-var handleMod		=	require("gloomfall/redisGui/general/handleMod");
-var handleNpc		=	require("gloomfall/redisGui/general/handleNpc");
-var handleLand		=	require("gloomfall/redisGui/general/land/handleLand");
+var handlerz		=	require("redisGui/redisGui/general/handler");
+var createItem		=	require("redisGui/redisGui/general/createItem");
+var handleUsers		=	require("redisGui/redisGui/general/handleUsers");
+var handleChars		=	require("redisGui/redisGui/general/handleChars");
+var handleMod		=	require("redisGui/redisGui/general/handleMod");
+var handleNpc		=	require("redisGui/redisGui/general/handleNpc");
+var handleLand		=	require("redisGui/redisGui/general/land/handleLand");
 var formidable		=	require("formidable");
 var sys				=	require("sys");
 
 var app 			=	require('http').createServer(handler);
 var io 				=	require('socket.io').listen(app);
 var fs 				=	require('fs');
-var populate 		=	require("gloomfall/redisGui/general/readfiles");
+var populate 		=	require("redisGui/redisGui/general/readfiles");
 
 app.listen(8081);
 

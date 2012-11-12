@@ -1,4 +1,4 @@
-var getFromRedis	=	require("gloomfall/redisGui/general/goToRedis");
+var getFromRedis	=	require("redisGui/redisGui/general/goToRedis");
 getFromRedis		=	getFromRedis.getFromRedis;
 
 function handle(data,socket)
