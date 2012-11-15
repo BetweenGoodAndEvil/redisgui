@@ -189,7 +189,7 @@ io.sockets.on
 						handleLand.handleNewLand(socket,data);
 					}
 				);
-			socket.on('saveeditedLand', 
+			socket.on('saveEditedLand', 
 				function(data) 
 					{	
 						console.log('edit land set received');

@@ -191,18 +191,21 @@ function createLand()
 function saveLand()
 	{
 		alert('updating edited land on db8');
-		var landName 	= document.getElementById("landName").innerHTML;
-		var size 		= document.getElementById("landsize").innerHTML;
-		var model 		= document.getElementById("model").innerHTML;
-		var map			= document.getElementById("map").innerHTML;
-		var owners		= document.getElementById("owners").innerHTML;
-		var sound		= document.getElementById("sound").innerHTML;
-		var description	= document.getElementById("description").innerHTML;
-		var lvl			= document.getElementById("lvl").innerHTML;
-		var l			= document.getElementById("neighBourLeft").innerHTML;
-		var t			= document.getElementById("neighBourTop").innerHTML;
-		var r			= document.getElementById("neighBourRight").innerHTML;
-		var b			= document.getElementById("neighBourBot").innerHTML;
+		var landName 	= document.getElementById("enterLandNamez").value;
+		var size 		= document.getElementById("sizeDiv1z").value;
+		var model 		= document.getElementById("modelDiv1z").value;
+		alert(model);
+		alert(document.getElementById("modelDiv1z"));
+		alert(document.getElementById("modelDiv1z").value);
+		var map			= 'map';//document.getElementById("map").innerHTML;
+		var owners		= document.getElementById("owners1z").value;
+		var sound		= document.getElementById("soundDiv1z").value;
+		var description	= document.getElementById("descriptionDiv1z").value;
+		var lvl			= document.getElementById("lvlz").value;
+		var l			= document.getElementById("lLeft").value;
+		var t			= document.getElementById("lTop").value;
+		var r			= document.getElementById("lRight").value;
+		var b			= document.getElementById("lBot").value;
 		socket.emit('saveEditedLand',[landName,size,model,map,owners,sound,description,lvl,l,t,r,b]);
 	}
 	

@@ -124,6 +124,7 @@ function handleEditedLand(socket,data)
 		var r 			= data[10];
 		var b 			= data[11];
 		var continent 	= data[12];
+		console.log('model = '+model);
 		setEditedLand(landName,size,model,soundDiv1z,owners,sound,description,lvl,l,t,r,b,continent);
 	}
 
