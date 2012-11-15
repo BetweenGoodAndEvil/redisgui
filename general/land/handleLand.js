@@ -9,7 +9,7 @@ function handleNewLand(socket,data)
 		var landName 	= data[0];
 		var size 		= data[1];
 		var model 		= data[2];
-		var soundDiv1z 	= data[3];
+		var map		 	= data[3];
 		var owners 		= data[4];
 		var sound 		= data[5];
 		var description = data[6];
@@ -19,8 +19,9 @@ function handleNewLand(socket,data)
 		var r 			= data[10];
 		var b 			= data[11];
 		var continent 	= data[12];
-		console.log('landName = '+ landName,size,model,soundDiv1z,owners,sound,description,lvl,l,t,r,b,'continent = '+continent);
-		setNewLand(landName,size,model,soundDiv1z,owners,sound,description,lvl,l,t,r,b,continent);
+		var texture 	= data[13];
+		console.log('landName = '+ landName,size,model,map,owners,sound,description,lvl,l,t,r,b,'continent = '+continent);
+		setNewLand(landName,size,model,map,owners,sound,description,lvl,l,t,r,b,continent,texture);
 	}
 
 function emptyLand(socket,data)
@@ -114,7 +115,7 @@ function handleEditedLand(socket,data)
 		var landName 	= data[0];
 		var size 		= data[1];
 		var model 		= data[2];
-		var soundDiv1z 	= data[3];
+		var map 		= data[3];
 		var owners 		= data[4];
 		var sound 		= data[5];
 		var description = data[6];
@@ -124,13 +125,18 @@ function handleEditedLand(socket,data)
 		var r 			= data[10];
 		var b 			= data[11];
 		var continent 	= data[12];
+		var texture		= data[13];
+		var npcs		= data[14];
+		var port		= data[15];
 		console.log('model = '+model);
-		setEditedLand(landName,size,model,soundDiv1z,owners,sound,description,lvl,l,t,r,b,continent);
+		console.log('port = '+port);
+		console.log('lvl = '+lvl);
+		setEditedLand(landName,size,model,map,owners,port,description,lvl,l,t,r,b,continent,npcs,texture,sound);
 	}
 
-function setEditedLand(landName,size,model,soundDiv1z,owners,sound,description,lvl,l,t,r,b,continent)
+function setEditedLand(landName,size,model,map,owners,port,description,lvl,l,t,r,b,continent,npcs,texture,sound)
 	{
-		var newLand = new land.land(landName,description,owners,'',model,'2000',continent,soundDiv1z,lvl);
+		var newLand = new land.land(landName,description,owners,map,model,port,continent,npcs,lvl,texture,sound);
 		var stringLand = JSON.stringify(newLand);
 		redisClient1.set(landName,stringLand);
 		redisClient1.sadd(continent,landName);

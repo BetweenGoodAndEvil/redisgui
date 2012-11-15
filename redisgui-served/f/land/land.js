@@ -33,7 +33,9 @@ function returnLandText(landName,description,sound,size,model,owners,npcs,mobs,l
 		"lands size		=	<input type='text' 		id='sizeDiv1z' 			value='"+size+"'></input><br />"+
 		"lands sound	=	<input type='text' 		id='soundDiv1z' 		value='"+sound+"'></input><input type='button' onclick='selectOtherAudio()' value='choose other audio'></input><br />"+
 		"lands model	=	<input type='text'	 	id='modelDiv1z' 		value='"+model+"'  maxlength=\'2000000\'></input><br /><br />"+
+		"lands map		=	<input type='text' 		id='landMaps' 			value='map in here'></input><br />"+
 		"lands owners	=	<input type='text' 		id='owners1z' 			value='"+owners+"'></input><br />"+
+		"map: 			=	<input type='text' 		id='dasMap' 			value='map'></input><br />"+
 		"lands npcs		=	<input type='button'	id='npcs' 				value='showNpcs' onclick='showNpcs(\"\")'></input><br />"+
 		"lands mobs		=	<input type='button'	id='mobs' 				value='showMobs' onclick='showMobs(\""+mobs+"\")'></input><br />"+
 		"lands lvl		=	<input type='text'		id='lvlz' 				value='"+lvl+"'></input><br />"+
@@ -41,6 +43,9 @@ function returnLandText(landName,description,sound,size,model,owners,npcs,mobs,l
 		"lands bot		=	<input type='text'		id='lBot' 				value='land on Bot'>	</input><input type='button'	id='botz' 				value='pick land' onclick='showLands(\""+b+"\")'></input><br />"+
 		"lands left		=	<input type='text'		id='lLeft' 				value='land on Left'>	</input><input type='button'	id='leftz' 				value='pick land' onclick='showLands(\""+l+"\")'></input><br />"+
 		"lands right	=	<input type='text'		id='lRight' 			value='land on Right'>	</input><input type='button'	id='rightz' 			value='pick land' onclick='showLands(\""+r+"\")'></input><br />"+
+		"Texture: 		=	<input type='text'		id='lTexture' 			value='Texture: '><br />"+
+		"port: 			=	<input type='text'		id='thePort' 			value='Portnumber: '><br />"+
+		"Continent name: =	<input type='text'		id='lContinent' 		value='Continent name: '><br />"+
 		"<input type='button' value='empty players' onclick='removeplayers(\""+landName+"\")'></input>"+
 		"<input type='button' value='saveLand' onclick='saveLand()'></input>";
 		return landData;
@@ -120,6 +125,7 @@ var landTextDiv =
 		"<div id='neighbourRz' 		value='neighbourR'></div>"+
 		"<div id='neighbourBz' 		value='neighbourB'></div>"+
 		"<div id='levelz' value='levelz'></div>"+
+		"<div id='landTexture' value='textures'></div>"+
 		"<input type='hidden' id='landNpcsz'	value=''></input>"+
 	"</div>";
 
@@ -185,7 +191,9 @@ function createLand()
 		var r			= document.getElementById("neighBourRight").value;
 		var b			= document.getElementById("neighBourBot").value;
 		var continent	= document.getElementById("contienentSelector").value;
-		socket.emit('saveNewLand',[landName,'size',model,mapSelector,owners,sound,description,lvl,l,t,r,b,continent]);
+		var npcs = '';
+		var npcs = '';
+		socket.emit('saveNewLand',[landName,'size',model,mapSelector,owners,sound,description,lvl,l,t,r,b,continent,texture]);
 	}
 	
 function saveLand()
@@ -197,7 +205,7 @@ function saveLand()
 		alert(model);
 		alert(document.getElementById("modelDiv1z"));
 		alert(document.getElementById("modelDiv1z").value);
-		var map			= 'map';//document.getElementById("map").innerHTML;
+		var map			= document.getElementById("dasMap").innerHTML;
 		var owners		= document.getElementById("owners1z").value;
 		var sound		= document.getElementById("soundDiv1z").value;
 		var description	= document.getElementById("descriptionDiv1z").value;
@@ -206,7 +214,14 @@ function saveLand()
 		var t			= document.getElementById("lTop").value;
 		var r			= document.getElementById("lRight").value;
 		var b			= document.getElementById("lBot").value;
-		socket.emit('saveEditedLand',[landName,size,model,map,owners,sound,description,lvl,l,t,r,b]);
+		var texture		= document.getElementById("lTexture").value;
+		var thePort		= document.getElementById("thePort").value;
+		var continent	= document.getElementById("lContinent").value;
+		var npcs		= 'npcs not implemented atm';
+		
+		alert(sound);
+		alert(thePort);
+		socket.emit('saveEditedLand',[landName,size,model,map,owners,sound,description,lvl,l,t,r,b,continent,texture,npcs,thePort]);
 	}
 	
 function removeplayers(landname)
